@@ -3,9 +3,9 @@ import webbrowser
 
 def calculate_bmi(weight, height):
     """
-    Calculates BMI based on weight (lb) and height (inch).
+    Calculates BMI based on weight (kg) and height (m).
     """
-    bmi = 703 * weight / (height * height)
+    bmi = weight / (height * height)
     return bmi
 
 
@@ -15,8 +15,8 @@ def print_bmi_category():
     floats, uses calculate_bmi to calculate BMI value, and prints the
     corresponding BMI category.
     """
-    weight = input("Enter your weight (lb): ")
-    height = input("Enter your height (inch): ")
+    weight = input("Enter your weight (kg): ")
+    height = input("Enter your height (m): ")
     weight = float(weight)
     height = float(height)
 
