@@ -7,6 +7,6 @@ def my_abs(x):
 
 
 # Testing is important!
-print(my_abs(10))
-print(my_abs(0))
-print(my_abs(-10.5))
+# print(my_abs(10))
+# print(my_abs(0))
+# print(my_abs(-10.5))

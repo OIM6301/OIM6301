@@ -1,3 +1,6 @@
+from ch04_ex04 import my_abs
+
+
 # Exercise 5
 def my_abs_5(number):
     """
@@ -15,10 +18,11 @@ def my_abs_5(number):
         return/raise an Error
     """
     if isinstance(number, (int, float)):
-        if number < 0:
-            return -number
-        else:
-            return number
+        # if number < 0:
+        #     return -number
+        # else:
+        #     return number
+        return my_abs(number)
     else:
         print("I don't know how to solve this")
         return "Wrong type of arguments"
@@ -26,3 +30,5 @@ def my_abs_5(number):
 
 
 print(my_abs_5(-10))
+print(my_abs_5(5.5))
+print(my_abs_5("Hello"))
