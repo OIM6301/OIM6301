@@ -1,4 +1,4 @@
-from s09 import calc_area
+from s11_simulations import simulation
 
 
-calc_area(100)
+print(simulation())
