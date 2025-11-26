@@ -21,7 +21,15 @@ def use_only(letters, word):
 # print(use_only("kroiacm", "roam"))  # True
 
 
-def spelling_bee():
+def at_least(word, n):
+    return len(word) >= n
+
+
+def must_use(word, letter):
+    return letter in word
+
+
+def spelling_bee(available_letters, required_letter):
     """Print all the words that are at least 4 letters long, contain the letter 'm',
     and only use the letters in 'kroiacm'"""
     # words = ["abcd", "roam", "xyz", "aaaaaa", "room", "mad"]
@@ -29,10 +37,20 @@ def spelling_bee():
     with open("data/words.txt") as f:
         words = f.read().splitlines()
     # print(words)
-    available_letters = "kroiacm"
+
     for word in words:
-        if len(word) >= 4 and "m" in word and use_only(available_letters, word):
+        if (
+            at_least(word, 4)
+            and must_use(word, required_letter)
+            and use_only(available_letters, word)
+        ):
             print(word)
 
 
-spelling_bee()
+def solve():
+    available_letters = input("What are the available letters: ")
+    required_letter = input("What is the required letter: ")
+    spelling_bee(available_letters, required_letter)
+
+
+solve()
